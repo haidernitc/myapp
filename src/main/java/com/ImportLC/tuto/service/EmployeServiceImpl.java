@@ -1,4 +1,4 @@
-package com.technosofteam.tuto.service;
+package com.ImportLC.tuto.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.technosofteam.tuto.dao.EmployeDao;
-import com.technosofteam.tuto.model.Employe;
+import com.ImportLC.tuto.dao.EmployeDao;
+import com.ImportLC.tuto.model.Employe;
 
 /**
  * 

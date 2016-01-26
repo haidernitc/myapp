@@ -1,7 +1,7 @@
-package com.technosofteam.tuto.dao;
+package com.ImportLC.tuto.dao;
 import java.util.List;
 
-import com.technosofteam.tuto.model.Employe;
+import com.ImportLC.tuto.model.Employe;
 
 
 public interface EmployeDao {

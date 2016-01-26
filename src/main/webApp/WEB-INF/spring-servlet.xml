@@ -14,7 +14,7 @@
         http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-	<context:component-scan base-package="com.technosofteam.tuto" />
+	<context:component-scan base-package="com.ImportLC.tuto" />
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<!-- load values used for bean properties -->
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -39,7 +39,8 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.technosofteam.tuto.model.Employe</value>
+				<value>com.ImportLC.tuto.model.Employe</value>
+				<value>com.ImportLC.tuto.model.Cutomer</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

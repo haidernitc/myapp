@@ -1,4 +1,4 @@
-package com.technosofteam.tuto.dao;
+package com.ImportLC.tuto.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.technosofteam.tuto.model.Employe;
+import com.ImportLC.tuto.model.Employe;
 /**
  * Repository test class
  * We use mockito and TestNg Assertions

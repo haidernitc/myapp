@@ -1,4 +1,4 @@
-package com.technosofteam.tuto.controller;
+package com.ImportLC.tuto.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -7,14 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.technosofteam.tuto.model.Employe;
-import com.technosofteam.tuto.service.EmployeService;
+import com.ImportLC.tuto.model.Employe;
+import com.ImportLC.tuto.service.EmployeService;
 
 /**
  * Employe controller
@@ -40,7 +39,8 @@ public class EmployeController {
 	}
 
 	/**
-	 * Form initialisation associated to employe.jsp when URL is loaded for the first time
+	 * Form initialisation associated to employe.jsp when URL is loaded for the
+	 * first time
 	 * 
 	 * @param map
 	 * @return
@@ -55,62 +55,73 @@ public class EmployeController {
 
 	/**
 	 * This controller method insert the passed employe in the database
+	 * 
 	 * @param employe
-	 * @return Employes json list 
-	 */
-	@RequestMapping(value = "/insert.employe", method = RequestMethod.POST)
-	public @ResponseBody
-	List<Employe> insertEmploye(@ModelAttribute Employe employe) {
-		employeService.add(employe);
-		// We get employes list
-		List<Employe> allEmployes = (List<Employe>) employeService.getAllEmployes();
-		return allEmployes;
-	}
-	/**
-	 * This controller method update the passed employe in the database
-	 * @param employe
-	 * @return
-	 */
-	@RequestMapping(value = "/update.employe", method = RequestMethod.POST)
-	public @ResponseBody
-	List<Employe> updateEmploye(@ModelAttribute Employe employe) {
-		employeService.update(employe);
-		// We get employes list
-		List<Employe> allEmployes = (List<Employe>) employeService.getAllEmployes();
-		return allEmployes;
-	}
-	/**
-	 * This controller method delete the passed employe by id in the database
-	 * @param employeId
-	 * @return Employes json list 
-	 */
-	@RequestMapping(value="/delete.employe", method = RequestMethod.GET)
-	public @ResponseBody List<Employe> deleteEmploye(@RequestParam int employeId){
-		employeService.delete(employeId);
-		// We get employes list
-		List<Employe> allEmployes = (List<Employe>) employeService.getAllEmployes();
-		return allEmployes;
-	}
-	/**
-	 * URL call that allows us to list employes in a table associated with angular directive
 	 * @return Employes json list
 	 */
-	@RequestMapping(value = "/list.employes", method = RequestMethod.GET)
-	public @ResponseBody
-	List<Employe> listEmployes() {
+	@RequestMapping(value = "/insert.employe", method = RequestMethod.POST)
+	public @ResponseBody List<Employe> insertEmploye(
+			@ModelAttribute Employe employe) {
+		employeService.add(employe);
 		// We get employes list
 		List<Employe> allEmployes = (List<Employe>) employeService
 				.getAllEmployes();
 		return allEmployes;
 	}
-	
+
+	/**
+	 * This controller method update the passed employe in the database
+	 * 
+	 * @param employe
+	 * @return
+	 */
+	@RequestMapping(value = "/update.employe", method = RequestMethod.POST)
+	public @ResponseBody List<Employe> updateEmploye(
+			@ModelAttribute Employe employe) {
+		employeService.update(employe);
+		// We get employes list
+		List<Employe> allEmployes = (List<Employe>) employeService
+				.getAllEmployes();
+		return allEmployes;
+	}
+
+	/**
+	 * This controller method delete the passed employe by id in the database
+	 * 
+	 * @param employeId
+	 * @return Employes json list
+	 */
+	@RequestMapping(value = "/delete.employe", method = RequestMethod.GET)
+	public @ResponseBody List<Employe> deleteEmploye(@RequestParam int employeId) {
+		employeService.delete(employeId);
+		// We get employes list
+		List<Employe> allEmployes = (List<Employe>) employeService
+				.getAllEmployes();
+		return allEmployes;
+	}
+
+	/**
+	 * URL call that allows us to list employes in a table associated with
+	 * angular directive
+	 * 
+	 * @return Employes json list
+	 */
+	@RequestMapping(value = "/list.employes", method = RequestMethod.GET)
+	public @ResponseBody List<Employe> listEmployes() {
+		// We get employes list
+		List<Employe> allEmployes = (List<Employe>) employeService
+				.getAllEmployes();
+		return allEmployes;
+	}
+
 	/**
 	 * This controller method RETURN the passed employe by id in the database
+	 * 
 	 * @param employeId
-	 * @return Employes json list 
+	 * @return Employes json list
 	 */
-	@RequestMapping(value="/get.employe", method = RequestMethod.GET)
-	public @ResponseBody Employe getEmploye(@RequestParam int employeId){
+	@RequestMapping(value = "/get.employe", method = RequestMethod.GET)
+	public @ResponseBody Employe getEmploye(@RequestParam int employeId) {
 		return employeService.getEmploye(employeId);
 	}
 
@@ -159,6 +170,5 @@ public class EmployeController {
 	public void setEmployeService(EmployeService employeService) {
 		this.employeService = employeService;
 	}
-	
-	
+
 }

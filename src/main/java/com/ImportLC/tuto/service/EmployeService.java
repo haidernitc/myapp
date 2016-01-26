@@ -1,7 +1,7 @@
-package com.technosofteam.tuto.service;
+package com.ImportLC.tuto.service;
 
 import java.util.List;
-import com.technosofteam.tuto.model.Employe;
+import com.ImportLC.tuto.model.Employe;
 
 public interface EmployeService {
 	public void add(Employe employe);

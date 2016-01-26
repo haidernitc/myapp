@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>MavenHibernateSpringAngularBootstrapCRUD</name>
-	<comment></comment>
+	<name>Fintra</name>
+	<comment>Maven Hibernate Spring Angular Bootstrap CRUD Using TDD Tutorial By TechnoSofTeam Authour: Maamar Yacine MEDDAH. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
