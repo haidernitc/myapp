@@ -41,7 +41,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public List<?> getAllCustomer() {
-		return session.getCurrentSession().createQuery("from Employe").list();
+		return session.getCurrentSession().createQuery("from Customer").list();
 	}
 
 }
